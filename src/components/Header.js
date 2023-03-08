@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/logo-no-background.png";
+import Logo from "../images/cv-creator-high-resolution-logo-color-on-transparent-background.png";
 import "./header.css"
 
 function Header() {

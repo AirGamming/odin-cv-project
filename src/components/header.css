@@ -1,9 +1,15 @@
+:root {
+	--primary-color: #040002;
+	--secondary-color: #f7fcff;
+	--accent-color: #f1b808;
+}
+
 #header {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(255, 115, 0);
+	background-color: var(--primary-color);
 	padding: 10px;
 	margin: 0;
 }
