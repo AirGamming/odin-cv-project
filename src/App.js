@@ -1,11 +1,13 @@
-
-
+import Form from "./components/Form";
+import Header from "./components/Header";
+import "./app.css"
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+	return (
+		<div className="App">
+      <Header />
+			<Form />
+		</div>
+	);
 }
 
 export default App;
