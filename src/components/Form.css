@@ -1,0 +1,40 @@
+form,
+form > fieldset {
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	width: 95%;
+}
+form > fieldset {
+	padding: 20px;
+	width: calc(95% + 48px);
+	margin: calc((100vw - (95% + 48px)) / 2);
+}
+form > fieldset > input::-webkit-outer-spin-button,
+form > fieldset > input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+form > fieldset > input[type="number"] {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
+form > fieldset > input,
+form > button {
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	border: 2px solid var(--accent-color);
+	border-radius: 4px;
+	background: none;
+	transition: all 0.2s ease-in-out;
+	font-size: 1rem;
+}
+form > button {
+	width: 100%;
+	margin: 0 calc((100vw - 100%) / 2);
+}
+form > button:hover {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}

@@ -1,0 +1,37 @@
+{
+    "personalInfo":{
+        "repeat": false,
+        "firstName":{
+            "type":"text",
+            "required":true
+        },
+        "lastName":{
+            "type":"text",
+            "required":true
+        },
+        "title":{
+            "type":"text",
+            "required":true
+        },
+        "email":{
+            "type":"email",
+            "required":true
+        },
+        "phone":{
+            "type":"number",
+            "required":true
+        },
+        "address":{
+            "type":"text",
+            "required":true
+        },
+        "photo":{
+            "type":"file",
+            "required":false
+        },
+        "description":{
+            "type":"textarea",
+            "required":false
+        }
+    }
+}
