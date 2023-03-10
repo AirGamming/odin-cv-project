@@ -1,37 +1,110 @@
-{
-    "personalInfo":{
+[
+    {
         "repeat": false,
-        "firstName":{
+        "name": "personalInfo",
+        "components":[
+        {
+        "name":"firstName",
+        "type":"text",
+        "required":true
+        },
+        {
+            "name":"lastName",
             "type":"text",
             "required":true
         },
-        "lastName":{
+        {
+            "name": "title",
             "type":"text",
             "required":true
         },
-        "title":{
-            "type":"text",
-            "required":true
-        },
-        "email":{
+        {
+            "name": "email",
             "type":"email",
             "required":true
         },
-        "phone":{
+        {
+            "name": "phone",
             "type":"number",
             "required":true
         },
-        "address":{
+        {
+            "name": "address",
             "type":"text",
             "required":true
         },
-        "photo":{
+        {
+            "name": "photo",
             "type":"file",
             "required":false
         },
-        "description":{
+        {
+            "name": "description",
             "type":"textarea",
             "required":false
         }
+    ]
+    },
+    {
+    "name": "education",
+    "repeat": true,
+    "components": [
+        {
+            "name":"school",
+            "type":"text",
+            "required":true
+        },
+        {
+            "name":"degree",
+            "type":"text",
+            "required":true
+        },
+        {
+            "name": "stated",
+            "type":"date",
+            "required":true
+        },
+        {
+            "name": "ended",
+            "type":"date",
+            "required":true
+        },
+        {
+            "name": "description",
+            "type":"textarea",
+            "required":false
+        }]
+    },
+    { 
+        "name": "experience",
+        "repeat": true,
+         "components": [
+        {
+            "name":"company",
+            "type":"text",
+            "required":true
+        },
+        {
+            "name": "position",
+            "type":"text",
+            "required":true
+        },
+        {
+            "name": "starting",
+            "type":"date",
+            "required":true
+        },
+        {
+            "name": "ending",
+            "type":"date",
+            "required":true
+        },
+        {
+            "name": "description",
+            "type":"textarea",
+            "required":false
+        }
+    ]
     }
-}
+]
+
