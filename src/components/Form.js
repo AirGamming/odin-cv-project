@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../css/Form.css"
-import data from "./formFields.json"
+import data from "../json/formFields.json"
 
 class Form extends Component{
     render(){

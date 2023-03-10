@@ -1,22 +1,31 @@
 import Form from "./components/Form";
 import Header from "./components/Header";
-import "./css/app.css"
-import { jsPDF } from "jspdf";
+import DocPreview from "./components/DocPreview";
+import "./css/app.css";
+import jsPDF from "jspdf";
+
 
 function App() {
 	const doc = new jsPDF();
 
-	doc.text("hello world",10,10)
 
-	let savePDF = () =>
-	{
-		doc.save("cv.pdf")
-	} 
-	
+
+	let savePDF = () => {
+		console.log(document.querySelector("#docPreview"))
+		doc.html(document.querySelector("#docPreview"), {
+			callback: function (doc) {
+			  doc.save();
+			},
+			x: 10,
+			y: 10
+		 });
+	};
+
 	return (
 		<div className="App">
-      <Header />
+			<Header />
 			<Form />
+			<DocPreview />
 			<button onClick={savePDF}>save PDF</button>
 		</div>
 	);

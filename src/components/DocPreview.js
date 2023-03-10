@@ -1,12 +1,10 @@
-import React, { component } from "react";
+import React from "react";
+import "../css/doc.css";
 
-class DocPreview extends component {
-
-    render(){
-        return(
-            <div id="docPreview">
-                
-            </div>
-        )
-    }
+const DocPreview = () => {
+    return(
+        <div id="docPreview"><h1>elo</h1></div>
+    )
 }
+
+export default DocPreview;
