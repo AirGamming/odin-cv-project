@@ -12,31 +12,32 @@ class Form extends Component{
             return( 
             <fieldset id={el.name}>
             <legend>{el.name}</legend>
-                {el.components.map(e =>{
+                {el.components.map((e) => {
                     if(e.required){
-                        return(
-                            <input 
-                            key={e.name}
-                            type={e.type}
-                            name={e.name}
-                            placeholder={e.name}
-                            onChange={this.props.HandleChange}
-                            required
-                            />
-                        )
-                    }
-                    else{
-                        return(
-                            <input 
-                            key={e.name}
-                            type={e.type}
-                            name={e.name}
-                            onChange={this.props.HandleChange}
-                            placeholder={e.name}
-                            />
+                    return(
+                        <input 
+                        key={e.name}
+                        type={e.type}
+                        name={e.name}
+                        placeholder={e.name}
+                        onChange={this.props.HandleChange}
+                        required
+                        />
                     )
+                    }  
+                    else{
+                    return(
+                        <input 
+                        key={e.name}
+                        type={e.type}
+                        name={e.name}
+                        onChange={this.props.HandleChange}
+                        placeholder={e.name}
+                        />
+                    )
+                    }
                 }
-                })                
+                )                
                 }
             </fieldset>
             )

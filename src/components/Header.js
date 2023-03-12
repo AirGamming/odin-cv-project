@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "../images/cv-creator-high-resolution-logo-color-on-transparent-background.png";
-import "../css/header.css"
+import Logo from "../images/CVCreatorLogo.png";
+import "../css/header.css";
 
 function Header() {
 	return (
 		<div id="header">
-			<img src={Logo} alt="logo" height="80px"/>
+			<img src={Logo} alt="logo" height="80px" />
 		</div>
 	);
 }
