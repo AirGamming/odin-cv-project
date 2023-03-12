@@ -6,25 +6,29 @@ import jsPDF from "jspdf";
 
 
 function App() {
-	const doc = new jsPDF();
+	const doc = new jsPDF('portrait', 'pt', 'a4');
 
 
 
-	let savePDF = () => {
+	function savePDF (){
 		console.log(document.querySelector("#docPreview"))
 		doc.html(document.querySelector("#docPreview"), {
 			callback: function (doc) {
 			  doc.save();
+
 			},
-			x: 10,
-			y: 10
+			
 		 });
 	};
+
+	function handleChange(e) {
+		console.log("elo")
+	}
 
 	return (
 		<div className="App">
 			<Header />
-			<Form />
+			<Form HandleChange={handleChange}/>
 			<DocPreview />
 			<button onClick={savePDF}>save PDF</button>
 		</div>

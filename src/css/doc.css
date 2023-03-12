@@ -1,5 +1,21 @@
 #docPreview {
-	aspect-ratio: 210 / 297;
-	min-width: 210mm;
-	min-height: 297mm;
+	height: 840px;
+	width: 596px;
+	position: relative;
+	z-index: 0;
+}
+.header {
+	width: 100%;
+	height: 10%;
+	background-color: rgba(147, 147, 252, 0.445);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+}
+.header > img {
+	object-fit: cover;
+
+	border-radius: 50%;
+	margin: 10px;
 }
