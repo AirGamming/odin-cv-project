@@ -1,17 +1,18 @@
 #docPreview {
 	height: 840px;
 	width: 596px;
-	position: relative;
+	/* position: relative; */
 	z-index: 0;
 }
 .header {
+	/* position: absolute; */
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 10%;
 	background-color: rgba(147, 147, 252, 0.445);
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: flex;
+	grid-columns: 2;
 }
 .header > img {
 	object-fit: cover;

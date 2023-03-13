@@ -4,7 +4,7 @@ import placeholder from "../images/Portrait_Placeholder.png"
 
 const DocPreview = (props) => {
 
-    // let {data} = props
+    let {data} = props
 
     return(
         <div id="docPreview">
@@ -15,7 +15,7 @@ const DocPreview = (props) => {
                 height="96px"
                 />
                 <div >
-                <h2>LOREM IPSUM</h2>
+                <h2>{data.map(i => i.name === "firstName" ? i.value : null)}</h2>
                 <i>Junior Frontend Developer</i>
                 </div>
             </div>

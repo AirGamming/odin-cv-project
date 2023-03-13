@@ -4,11 +4,14 @@ form > fieldset {
 	flex-direction: column;
 	border-radius: 4px;
 	width: 95%;
+	max-width: 500px;
+}
+form {
+	place-self: center;
+	width: 100%;
 }
 form > fieldset {
 	padding: 20px;
-	width: calc(95% + 48px);
-	margin: calc((100vw - (95% + 48px)) / 2);
 }
 form > fieldset > input::-webkit-outer-spin-button,
 form > fieldset > input::-webkit-inner-spin-button {

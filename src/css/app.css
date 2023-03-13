@@ -6,7 +6,23 @@
 #root {
 	background-color: var(--secondary-color);
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	display: grid;
+	place-content: center;
+}
+#app {
+	padding-top: 100px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-gap: 1rem;
+}
+@media (min-width: 800px) {
+	#app {
+		grid-template-columns: 1fr 596px;
+	}
+}
+@media (max-width: 800px) {
+	#app {
+		grid-template-columns: 1fr;
+	}
 }
