@@ -3,53 +3,38 @@ import Header from "./components/Header";
 import DocPreview from "./components/DocPreview";
 import "./css/app.css";
 import jsPDF from "jspdf";
-import { Component } from "react";
+import { useState } from "react";
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.doc = new jsPDF("portrait", "pt", "a4");
-		this.handleChange = this.handleChange.bind(this);
-		this.savePDF = this.savePDF.bind(this);
-		this.data = [
-			{
-				name: "firstName",
-				value: "name",
-			},
-		];
-		this.state = {
-			data: this.data,
-		};
-	}
+function App() {
+	let doc = new jsPDF("portrait", "pt", "a4");
 
-	savePDF() {
-		this.doc.html(document.querySelector("#docPreview"), {
+	const [data, setData] = useState({
+		firstName: "name",
+	});
+
+	function savePDF() {
+		doc.html(document.querySelector("#docPreview"), {
 			callback: function (doc) {
 				doc.save("cv.pdf");
 			},
 		});
 	}
 
-	handleChange(e) {
-		this.state.data.map((item) => {
-			if (item.name === e.target.key) {
-				item.value = e.target.value;
-				console.log(this.data);
-			}
-			this.render();
-			return item.value;
+	function handleChange(e) {
+		e.preventDefault();
+		setData((prevData) => {
+			return { ...prevData, firstName: e.target.value };
 		});
 	}
-	render() {
-		return (
-			<div className="App" id="app">
-				<Header />
-				<Form HandleChange={this.handleChange} />
-				<DocPreview state={this.state} />
-				<button onClick={this.savePDF}>save PDF</button>
-			</div>
-		);
-	}
+
+	return (
+		<div className="App" id="app">
+			<Header />
+			<Form HandleChange={handleChange} />
+			<DocPreview data={data} />
+			<button onClick={savePDF}>save PDF</button>
+		</div>
+	);
 }
 
 export default App;
