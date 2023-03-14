@@ -16,7 +16,9 @@ const DocPreview = (props) => {
 					<i>{data.title}</i>
 				</div>
 			</div>
-			<div className="aside"></div>
+			<div className="aside">
+                
+            </div>
 		</div>
 	);
 };

@@ -26,9 +26,19 @@ function App() {
 	function handleChange(e) {
 		let key = e.target.name;
 		e.preventDefault();
-		setData((prevData) => {
-			return { ...prevData, [key]: e.target.value };
-		});
+		if (e.target.type === "file") {
+			setData((prevData) => {
+				console.log(URL.createObjectURL(e.target.files[0]));
+				return {
+					...prevData,
+					[key]: URL.createObjectURL(e.target.files[0]),
+				};
+			});
+		} else {
+			setData((prevData) => {
+				return { ...prevData, [key]: e.target.value };
+			});
+		}
 	}
 
 	return (
