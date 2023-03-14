@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../css/Form.css";
 import data from "../json/formFields.json";
-// import uniqid from "uniqid";
 
 class Form extends Component {
 	render() {

@@ -3,13 +3,16 @@ import Header from "./components/Header";
 import DocPreview from "./components/DocPreview";
 import "./css/app.css";
 import jsPDF from "jspdf";
-import { useState } from "react";
+import React, { useState } from "react";
+import placeholder from "./images/Portrait_Placeholder.png";
 
 function App() {
 	let doc = new jsPDF("portrait", "pt", "a4");
 
 	const [data, setData] = useState({
-		firstName: "name",
+		firstName: "firstName",
+		lastName: "lastName",
+		photo: placeholder,
 	});
 
 	function savePDF() {
@@ -21,9 +24,10 @@ function App() {
 	}
 
 	function handleChange(e) {
+		let key = e.target.name;
 		e.preventDefault();
 		setData((prevData) => {
-			return { ...prevData, firstName: e.target.value };
+			return { ...prevData, [key]: e.target.value };
 		});
 	}
 
@@ -31,7 +35,7 @@ function App() {
 		<div className="App" id="app">
 			<Header />
 			<Form HandleChange={handleChange} />
-			<DocPreview data={data} />
+			<DocPreview Data={data} />
 			<button onClick={savePDF}>save PDF</button>
 		</div>
 	);
