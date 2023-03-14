@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../css/Form.css";
 import data from "../json/formFields.json";
+import uniqid from "uniqid";
 
 class Form extends Component {
 	render() {
@@ -8,31 +9,19 @@ class Form extends Component {
 			<form>
 				{data.map((el) => {
 					return (
-						<fieldset id={el.name}>
-							<legend>{el.name}</legend>
+						<fieldset key={uniqid()} id={el.name}>
+							<legend key={uniqid()}>{el.name}</legend>
 							{el.components.map((e) => {
-								if (e.required) {
-									return (
-										<input
-											key={e.name}
-											type={e.type}
-											name={e.name}
-											placeholder={e.name}
-											onChange={this.props.HandleChange}
-											required
-										/>
-									);
-								} else {
-									return (
-										<input
-											key={e.name}
-											type={e.type}
-											name={e.name}
-											onChange={this.props.HandleChange}
-											placeholder={e.name}
-										/>
-									);
-								}
+								return (
+									<input
+										key={uniqid()}
+										type={e.type}
+										name={e.name}
+										placeholder={e.name}
+										onChange={this.props.HandleChange}
+										required={e.required}
+									/>
+								);
 							})}
 						</fieldset>
 					);
