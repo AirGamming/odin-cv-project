@@ -28,7 +28,6 @@ function App() {
 		e.preventDefault();
 		if (e.target.type === "file") {
 			setData((prevData) => {
-				console.log(URL.createObjectURL(e.target.files[0]));
 				return {
 					...prevData,
 					[key]: URL.createObjectURL(e.target.files[0]),

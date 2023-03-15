@@ -4,7 +4,7 @@
 	/* position: relative; */
 	z-index: 0;
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 65% 35%;
 	grid-template-rows: 10% 90%;
 }
 .header {
@@ -26,9 +26,8 @@
 .aside {
 	grid-column: 2;
 	top: 0;
-
+	padding: 20px;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(147, 147, 252, 0.445);
-	display: flex;
 }

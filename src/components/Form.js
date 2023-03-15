@@ -7,6 +7,12 @@ class Form extends Component {
 		return (
 			<form>
 				{data.map((el) => {
+					let btn;
+					if (el.repeat) {
+						btn = <button onClick={this.props.addNewLineHandle}>+ add</button>;
+					} else {
+						btn = null;
+					}
 					return (
 						<fieldset key={el.name} id={el.name}>
 							<legend key={el.name}>{el.name}</legend>
@@ -18,10 +24,10 @@ class Form extends Component {
 										name={e.name}
 										placeholder={e.name}
 										onChange={this.props.HandleChange}
-										required={e.required}
 									/>
 								);
 							})}
+							{btn}
 						</fieldset>
 					);
 				})}

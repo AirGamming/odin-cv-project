@@ -2,7 +2,6 @@ import React from "react";
 import "../css/doc.css";
 
 const DocPreview = (props) => {
-	// console.log(this.props.data);
 	let data = props.Data;
 
 	return (
@@ -17,8 +16,21 @@ const DocPreview = (props) => {
 				</div>
 			</div>
 			<div className="aside">
-                
-            </div>
+				<p>
+					Phone Number: <br />
+					{data.phone}
+				</p>
+				<br />
+				<p>
+					E-mail Adress: <br />
+					{data.email}
+				</p>
+				<br />
+				<p>
+					Adress: <br />
+					{data.adress}
+				</p>
+			</div>
 		</div>
 	);
 };

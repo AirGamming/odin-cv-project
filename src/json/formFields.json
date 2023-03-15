@@ -5,43 +5,43 @@
         "components":[
         {
         "name":"firstName",
-        "type":"text",
-        "required":true
+        "type":"text"
+        
         },
         {
             "name":"lastName",
-            "type":"text",
-            "required":true
+            "type":"text"
+            
         },
         {
             "name": "title",
-            "type":"text",
-            "required":true
+            "type":"text"
+            
         },
         {
             "name": "email",
-            "type":"email",
-            "required":true
+            "type":"email"
+            
         },
         {
             "name": "phone",
-            "type":"number",
-            "required":true
+            "type":"number"
+            
         },
         {
-            "name": "address",
-            "type":"text",
-            "required":true
+            "name": "adress",
+            "type":"text"
+            
         },
         {
             "name": "photo",
-            "type":"file",
-            "required":false
+            "type":"file"
+
         },
         {
             "name": "description",
-            "type":"textarea",
-            "required":false
+            "type":"textarea"
+
         }
     ]
     },
@@ -51,28 +51,27 @@
     "components": [
         {
             "name":"school",
-            "type":"text",
-            "required":true
+            "type":"text"
+            
         },
         {
             "name":"degree",
-            "type":"text",
-            "required":true
+            "type":"text"
+            
         },
         {
             "name": "stated",
-            "type":"date",
-            "required":true
+            "type":"date"
+            
         },
         {
             "name": "ended",
-            "type":"date",
-            "required":true
+            "type":"date"
+            
         },
         {
             "name": "description",
-            "type":"textarea",
-            "required":false
+            "type":"textarea"
         }]
     },
     { 
@@ -81,28 +80,27 @@
          "components": [
         {
             "name":"company",
-            "type":"text",
-            "required":true
+            "type":"text"
+            
         },
         {
             "name": "position",
-            "type":"text",
-            "required":true
+            "type":"text"
+            
         },
         {
             "name": "starting",
-            "type":"date",
-            "required":true
+            "type":"date"
+            
         },
         {
             "name": "ending",
-            "type":"date",
-            "required":true
+            "type":"date"
+            
         },
         {
             "name": "description",
-            "type":"textarea",
-            "required":false
+            "type":"textarea"
         }
     ]
     }
