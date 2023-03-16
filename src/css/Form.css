@@ -24,7 +24,7 @@ form > fieldset > input[type="number"] {
 	-moz-appearance: textfield;
 }
 form > fieldset > input,
-form > button {
+form > fieldset > button {
 	margin: 0.5rem 0;
 	padding: 0.5rem;
 	border: 2px solid var(--accent-color);
@@ -40,4 +40,7 @@ form > button {
 form > button:hover {
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
+}
+textarea {
+	resize: vertical;
 }

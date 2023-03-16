@@ -4,43 +4,50 @@
         "name": "personalInfo",
         "components":[
         {
-        "name":"firstName",
-        "type":"text"
+            "name":"firstName",
+            "type":"text",
+            "placeholder": "First Name"
         
         },
         {
             "name":"lastName",
-            "type":"text"
-            
+            "type":"text",
+            "placeholder": "Last Name"
         },
         {
             "name": "title",
-            "type":"text"
+            "type":"text",
+            "placeholder": "Personal title"
             
         },
         {
             "name": "email",
-            "type":"email"
+            "type":"email",
+            "placeholder": "Email"
             
         },
         {
             "name": "phone",
-            "type":"number"
+            "type":"number",
+            "placeholder": "Phone"
             
         },
         {
             "name": "adress",
-            "type":"text"
+            "type":"text",
+            "placeholder": "Adress"
             
         },
         {
             "name": "photo",
-            "type":"file"
+            "type":"file",
+            "placeholder": "Photo"
 
         },
         {
-            "name": "description",
-            "type":"textarea"
+            "name": "pInfoDescription",
+            "type":"textarea",
+            "placeholder": "Personal Info Description"
 
         }
     ]
@@ -51,27 +58,31 @@
     "components": [
         {
             "name":"school",
-            "type":"text"
+            "type":"text",
+            "placeholder": "School"
             
         },
         {
             "name":"degree",
-            "type":"text"
+            "type":"text",
+            "placeholder": "Degree"
             
         },
         {
             "name": "stated",
-            "type":"date"
-            
+            "type":"number",
+            "placeholder": "Stated"
         },
         {
             "name": "ended",
-            "type":"date"
+            "type":"number",
+            "placeholder": "Ended"
             
         },
         {
-            "name": "description",
-            "type":"textarea"
+            "name": "eduDescription",
+            "type":"textarea",
+            "placeholder": "Education Description"
         }]
     },
     { 
@@ -80,27 +91,31 @@
          "components": [
         {
             "name":"company",
-            "type":"text"
+            "type":"text",
+            "placeholder": "Company"
             
         },
         {
             "name": "position",
-            "type":"text"
+            "type":"text",
+            "placeholder": "Position"
             
         },
         {
             "name": "starting",
-            "type":"date"
+            "type":"number",
+            "placeholder": "Starting"
             
         },
         {
             "name": "ending",
-            "type":"date"
-            
+            "type":"number",
+            "placeholder": "Ending"
         },
         {
-            "name": "description",
-            "type":"textarea"
+            "name": "expDescription",
+            "type":"textarea",
+            "placeholder": "Experience Description"
         }
     ]
     }

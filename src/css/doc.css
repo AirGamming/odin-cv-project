@@ -6,6 +6,7 @@
 	display: grid;
 	grid-template-columns: 65% 35%;
 	grid-template-rows: 10% 90%;
+	overflow-wrap: anywhere;
 }
 .header {
 	/* position: absolute; */
@@ -30,4 +31,20 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(147, 147, 252, 0.445);
+}
+main {
+	padding: 10px;
+	padding-top: 30px;
+}
+.subHeading {
+	position: relative;
+}
+.subHeading::after {
+	position: absolute;
+	content: "";
+	width: 95%;
+	height: 1px;
+	background-color: black;
+	bottom: 0;
+	left: 0;
 }

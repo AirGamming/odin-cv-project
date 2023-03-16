@@ -3,10 +3,14 @@ import "../css/Form.css";
 import data from "../json/formFields.json";
 
 class Form extends Component {
+	constructor(props) {
+		super(props);
+		this.data = data;
+	}
 	render() {
 		return (
 			<form>
-				{data.map((el) => {
+				{this.data.map((el) => {
 					let btn;
 					if (el.repeat) {
 						btn = <button onClick={this.props.addNewLineHandle}>+ add</button>;
@@ -22,7 +26,8 @@ class Form extends Component {
 										key={e.name}
 										type={e.type}
 										name={e.name}
-										placeholder={e.name}
+										id={e.name}
+										placeholder={e.placeholder}
 										onChange={this.props.HandleChange}
 									/>
 								);

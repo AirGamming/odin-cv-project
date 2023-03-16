@@ -15,6 +15,10 @@ const DocPreview = (props) => {
 					<i>{data.title}</i>
 				</div>
 			</div>
+			<main>
+				<h2 className="subHeading">Description:</h2>
+				{data.pInfoDescription}
+			</main>
 			<div className="aside">
 				<p>
 					Phone Number: <br />

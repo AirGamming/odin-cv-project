@@ -40,10 +40,32 @@ function App() {
 		}
 	}
 
+	function HendleAddAditionalForms(e) {
+		e.preventDefault();
+		let regexExpression = /^-[0-9]$/g;
+		let fieldset = e.target.parentElement;
+		let allInputs = fieldset.querySelectorAll("input");
+		let coreInputs = [];
+		allInputs.forEach((element) => {
+			if (element.key !== regexExpression) {
+				coreInputs.push(element);
+			}
+		});
+
+		coreInputs.forEach((element) => {
+			let initialKey = element.id;
+			element.id = initialKey + 1;
+			fieldset.appendChild(element);
+		});
+	}
+
 	return (
 		<div className="App" id="app">
 			<Header />
-			<Form HandleChange={handleChange} />
+			<Form
+				HandleChange={handleChange}
+				addNewLineHandle={HendleAddAditionalForms}
+			/>
 			<DocPreview Data={data} />
 			<button onClick={savePDF}>save PDF</button>
 		</div>
