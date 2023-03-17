@@ -24,6 +24,7 @@ form > fieldset > input[type="number"] {
 	-moz-appearance: textfield;
 }
 form > fieldset > input,
+form > fieldset > textarea,
 form > fieldset > button {
 	margin: 0.5rem 0;
 	padding: 0.5rem;
@@ -43,4 +44,11 @@ form > button:hover {
 }
 textarea {
 	resize: vertical;
+}.dateInfo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.schoolDegree {
+	align-self: flex-end;
 }

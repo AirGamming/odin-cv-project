@@ -21,6 +21,17 @@ class Form extends Component {
 						<fieldset key={el.name} id={el.name}>
 							<legend key={el.name}>{el.name}</legend>
 							{el.components.map((e) => {
+								if (e.type === "textarea") {
+									return (
+										<textarea
+											name={e.name}
+											id={e.name}
+											key={e.name}
+											placeholder={e.placehodler}
+											onChange={this.props.HandleChange}
+										></textarea>
+									);
+								}
 								return (
 									<input
 										key={e.name}

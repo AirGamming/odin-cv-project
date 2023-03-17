@@ -1,7 +1,8 @@
 #docPreview {
 	height: 840px !important;
 	width: 596px !important;
-	/* position: relative; */
+	position: sticky;
+	top: 0;
 	z-index: 0;
 	display: grid;
 	grid-template-columns: 65% 35%;

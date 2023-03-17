@@ -17,17 +17,40 @@ const DocPreview = (props) => {
 			</div>
 			<main>
 				<h2 className="subHeading">Description:</h2>
-				{data.pInfoDescription}
+				{data.pInfoDescription} <br />
+				<h2 className="subHeading">Education:</h2>
+				<div>
+					<div className="dateInfo">
+						<b>from-to</b>
+						<i> school, degree </i>
+					</div>
+					<br />
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. At, minima.
+					</p>
+				</div>
+				<p>lorem ipsum</p>
+				<h2 className="subHeading">Expirence:</h2>
+				<div>
+					<div className="dateInfo">
+						<b>from-to</b>
+						<i> school, degree </i>
+					</div>
+					<br />
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. At, minima.
+					</p>
+				</div>
 			</main>
 			<div className="aside">
 				<p>
-					Phone Number: <br />
-					{data.phone}
+					E-mail Adress: <br />
+					{data.email}
 				</p>
 				<br />
 				<p>
-					E-mail Adress: <br />
-					{data.email}
+					Phone Number: <br />
+					{data.phone}
 				</p>
 				<br />
 				<p>
