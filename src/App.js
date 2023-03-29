@@ -42,20 +42,27 @@ function App() {
 
 	function HendleAddAditionalForms(e) {
 		e.preventDefault();
-		let regexExpression = /^-[0-9]$/g;
-		let fieldset = e.target.parentElement;
-		let allInputs = fieldset.querySelectorAll("input");
+		let regexWithNumbers = new RegExp(/-[0-9]/gm);
+		let fieldset = e.target.parentNode;
+		let inputs = fieldset.querySelectorAll("input, textarea");
 		let coreInputs = [];
-		allInputs.forEach((element) => {
-			if (element.key !== regexExpression) {
-				coreInputs.push(element);
+		let newInputs = [];
+		newInputs.push(inputs);
+		inputs.forEach((el) => {
+			if (!regexWithNumbers.test(el.id)) {
+				coreInputs.push(el);
 			}
 		});
-
-		coreInputs.forEach((element) => {
-			let initialKey = element.id;
-			element.id = initialKey + 1;
-			fieldset.appendChild(element);
+		coreInputs.forEach((el) => {
+			let newElement = document.createElement(el.localName);
+			newElement.id = el.id + "-1";
+			newElement.key = el.key;
+			if (newElement.type !== "textarea") {
+				newElement.type = el.type;
+			}
+			newElement.placeholder = el.placeholder;
+			console.log(newElement);
+			newInputs.push(newElement);
 		});
 	}
 
@@ -64,7 +71,7 @@ function App() {
 			<Header />
 			<Form
 				HandleChange={handleChange}
-				addNewLineHandle={HendleAddAditionalForms}
+				newLineHandle={HendleAddAditionalForms}
 			/>
 			<DocPreview Data={data} />
 			<button onClick={savePDF}>save PDF</button>

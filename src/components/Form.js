@@ -13,7 +13,7 @@ class Form extends Component {
 				{this.data.map((el) => {
 					let btn;
 					if (el.repeat) {
-						btn = <button onClick={this.props.addNewLineHandle}>+ add</button>;
+						btn = <button onClick={this.props.newLineHandle}>+ add</button>;
 					} else {
 						btn = null;
 					}
