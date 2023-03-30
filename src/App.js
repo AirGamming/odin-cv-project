@@ -42,17 +42,21 @@ function App() {
 
 	function HendleAddAditionalForms(e) {
 		e.preventDefault();
-		let regexWithNumbers = new RegExp(/-[0-9]/gm);
+		let regexWithNumbers = new RegExp(/(.*\d$)/s);
 		let fieldset = e.target.parentNode;
 		let inputs = fieldset.querySelectorAll("input, textarea");
 		let coreInputs = [];
 		let newInputs = [];
-		newInputs.push(inputs);
+
 		inputs.forEach((el) => {
 			if (!regexWithNumbers.test(el.id)) {
 				coreInputs.push(el);
+				console.log(el.id);
 			}
+			newInputs.push(el);
 		});
+		console.log(!regexWithNumbers.test("position-1-1"));
+		console.log(coreInputs);
 		coreInputs.forEach((el) => {
 			let newElement = document.createElement(el.localName);
 			newElement.id = el.id + "-1";
@@ -61,8 +65,11 @@ function App() {
 				newElement.type = el.type;
 			}
 			newElement.placeholder = el.placeholder;
-			console.log(newElement);
 			newInputs.push(newElement);
+		});
+
+		newInputs.forEach((el) => {
+			fieldset.appendChild(el);
 		});
 	}
 
