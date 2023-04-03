@@ -69,12 +69,12 @@
             
         },
         {
-            "name": "stated",
+            "name": "eduStated",
             "type":"number",
-            "placeholder": "Stated"
+            "placeholder": "eduStated"
         },
         {
-            "name": "ended",
+            "name": "eduEnded",
             "type":"number",
             "placeholder": "Ended"
             
