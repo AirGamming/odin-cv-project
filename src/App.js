@@ -47,19 +47,22 @@ function App() {
 		let inputs = fieldset.querySelectorAll("input, textarea");
 		let coreInputs = [];
 		let newInputs = [];
-
+		let lastIDNum = inputs[inputs.length - 1];
+		lastIDNum = lastIDNum.id.split("-")[1];
+		if (lastIDNum === undefined) {
+			lastIDNum = 0;
+		}
+		lastIDNum = Number(lastIDNum);
+		console.log(lastIDNum + 1);
 		inputs.forEach((el) => {
 			if (!regexWithNumbers.test(el.id)) {
 				coreInputs.push(el);
-				console.log(el.id);
 			}
 			newInputs.push(el);
 		});
-		console.log(!regexWithNumbers.test("position-1-1"));
-		console.log(coreInputs);
 		coreInputs.forEach((el) => {
 			let newElement = document.createElement(el.localName);
-			newElement.id = el.id + "-1";
+			newElement.id = el.id + "-" + (lastIDNum + 1);
 			newElement.key = el.key;
 			if (newElement.type !== "textarea") {
 				newElement.type = el.type;

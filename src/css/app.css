@@ -16,12 +16,12 @@
 	grid-template-rows: 1fr;
 	grid-gap: 1rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 	#app {
 		grid-template-columns: 1fr 596px;
 	}
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 	#app {
 		grid-template-columns: 1fr;
 	}

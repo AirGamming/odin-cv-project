@@ -19,6 +19,7 @@ class Form extends Component {
 					}
 					return (
 						<fieldset key={el.name} id={el.name}>
+							{btn}
 							<legend key={el.name}>{el.name}</legend>
 							{el.components.map((e) => {
 								if (e.type === "textarea") {
@@ -43,7 +44,6 @@ class Form extends Component {
 									/>
 								);
 							})}
-							{btn}
 						</fieldset>
 					);
 				})}
