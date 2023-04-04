@@ -82,9 +82,9 @@ function App() {
 			<Form
 				HandleChange={handleChange}
 				newLineHandle={HendleAddAditionalForms}
+				savePDF={savePDF}
 			/>
 			<DocPreview Data={data} />
-			<button onClick={savePDF}>save PDF</button>
 		</div>
 	);
 }

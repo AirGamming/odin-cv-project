@@ -1,0 +1,18 @@
+footer {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+footer > a {
+	font-size: 2rem;
+	color: var(--accent-color);
+}
+footer > a:hover {
+	scale: 1.1;
+	color: var(--accent-color);
+}

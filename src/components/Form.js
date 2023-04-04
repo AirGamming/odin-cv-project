@@ -47,6 +47,7 @@ class Form extends Component {
 						</fieldset>
 					);
 				})}
+				<button onClick={this.props.savePDF}>save pdf</button>
 			</form>
 		);
 	}
