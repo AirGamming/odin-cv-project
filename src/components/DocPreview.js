@@ -35,7 +35,7 @@ const DocPreview = (props) => {
 				<h2 className="subHeading">Expirence:</h2>
 				<div>
 					<div className="dateInfo">
-						<b>from-to</b>
+						<b>{data.expFrom}-{data.expTo}</b>
 						<i> school, degree </i>
 					</div>
 					<br />
