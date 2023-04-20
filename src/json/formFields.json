@@ -102,13 +102,13 @@
             
         },
         {
-            "name": "expStarting",
+            "name": "expStarted",
             "type":"number",
             "placeholder": "Starting"
             
         },
         {
-            "name": "expEnding",
+            "name": "expEnded",
             "type":"number",
             "placeholder": "Ending"
         },
