@@ -71,7 +71,7 @@
         {
             "name": "eduStarted",
             "type":"number",
-            "placeholder": "eduStarted"
+            "placeholder": "Started"
         },
         {
             "name": "eduEnded",
@@ -104,13 +104,13 @@
         {
             "name": "expStarted",
             "type":"number",
-            "placeholder": "Starting"
+            "placeholder": "Started"
             
         },
         {
             "name": "expEnded",
             "type":"number",
-            "placeholder": "Ending"
+            "placeholder": "Ended"
         },
         {
             "name": "expDescription",

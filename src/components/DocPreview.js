@@ -6,7 +6,7 @@ const DocPreview = (props) => {
 	let education = [
 		data.school,
 		data.degree,
-		data.eduStated,
+		data.eduStarted,
 		data.eduEnded,
 		data.eduDescription,
 	];
