@@ -3,7 +3,13 @@ import "../css/doc.css";
 
 const DocPreview = (props) => {
 	let data = props.Data;
-	let education = [data.school, data.degree, data.eduStarted, data.eduEnded];
+	let education = [
+		data.school,
+		data.degree,
+		data.eduStated,
+		data.eduEnded,
+		data.eduDescription,
+	];
 
 	return (
 		<div id="docPreview">
@@ -21,16 +27,20 @@ const DocPreview = (props) => {
 				{data.pInfoDescription} <br />
 				<h2 className="subHeading">Education:</h2>
 				{education.map((item, index) => {
+					console.log(item, " ", index);
 					return (
 						<div key={index}>
 							<div className="dateInfo">
 								<b>
 									{item}-{item}
 								</b>
-								<i> {item} {item} </i>
+								<i>
+									{" "}
+									{item} {item}{" "}
+								</i>
 							</div>
 							<br />
-							<p>{item}</p>							
+							<p>{item}</p>
 						</div>
 					);
 				})}
