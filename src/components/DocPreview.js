@@ -3,13 +3,16 @@ import "../css/doc.css";
 
 const DocPreview = (props) => {
 	let data = props.Data;
-	let education = [
-		data.school,
-		data.degree,
-		data.eduStarted,
-		data.eduEnded,
-		data.eduDescription,
-	];
+
+	let dataFormated = [
+		{
+				"school": data.school,
+				"degree":data.degree,
+				"eduStarted":data.eduStarted,
+				"eduended":data.eduEnded,
+				"eduDescription":data.eduDescription,
+		}
+	]
 
 	return (
 		<div id="docPreview">
@@ -26,21 +29,21 @@ const DocPreview = (props) => {
 				<h2 className="subHeading">Description:</h2>
 				{data.pInfoDescription} <br />
 				<h2 className="subHeading">Education:</h2>
-				{education.map((item, index) => {
+				{dataFormated.map((item, index) => {
 					console.log(item, " ", index);
 					return (
 						<div key={index}>
 							<div className="dateInfo">
 								<b>
-									{item}-{item}
+									{item.eduStarted}-{item.eduended}
 								</b>
 								<i>
 									{" "}
-									{item} {item}{" "}
+									{item.school}, {item.degree}{" "}
 								</i>
 							</div>
 							<br />
-							<p>{item}</p>
+							<p>{item.eduDescription}</p>
 						</div>
 					);
 				})}
