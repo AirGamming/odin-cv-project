@@ -5,7 +5,7 @@ export default function Footer() {
 			<p>open source project || Arkadiusz Czechyra</p>
 			<br />
 			<a href={" https://github.com/AirGamming"}>
-				<i class="fa-brands fa-github"></i>
+				<i className="fa-brands fa-github"></i>
 			</a>
 		</footer>
 	);

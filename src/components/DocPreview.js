@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/doc.css";
+import { logDOM } from "@testing-library/react";
 
 const DocPreview = (props) => {
 	let data = props.Data;
@@ -13,6 +14,7 @@ const DocPreview = (props) => {
 	];
 	let regexWithNumbers = new RegExp(/(.*\d$)/s);
 
+	console.log(data);
 	let dataFormated = [
 		{
 			index: 0,
