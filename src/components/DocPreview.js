@@ -4,15 +4,24 @@ import "../css/doc.css";
 const DocPreview = (props) => {
 	let data = props.Data;
 
+	let schoolData = [
+		"school",
+		"degree",
+		"eduStarted",
+		"eduEnded",
+		"eduDescription",
+	];
+	let regexWithNumbers = new RegExp(/(.*\d$)/s);
+
 	let dataFormated = [
 		{
-				"school": data.school,
-				"degree":data.degree,
-				"eduStarted":data.eduStarted,
-				"eduended":data.eduEnded,
-				"eduDescription":data.eduDescription,
-		}
-	]
+			school: data.school,
+			degree: data.degree,
+			eduStarted: data.eduStarted,
+			eduended: data.eduEnded,
+			eduDescription: data.eduDescription,
+		},
+	];
 
 	return (
 		<div id="docPreview">
