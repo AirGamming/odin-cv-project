@@ -15,6 +15,7 @@ const DocPreview = (props) => {
 
 	let dataFormated = [
 		{
+			index: 0,
 			school: data.school,
 			degree: data.degree,
 			eduStarted: data.eduStarted,
