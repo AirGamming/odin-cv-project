@@ -53,7 +53,6 @@ function App() {
 			lastIDNum = 0;
 		}
 		lastIDNum = Number(lastIDNum);
-		console.log(lastIDNum + 1);
 		inputs.forEach((el) => {
 			if (!regexWithNumbers.test(el.id)) {
 				coreInputs.push(el);

@@ -26,6 +26,13 @@ const DocPreview = (props) => {
 		},
 	];
 
+	for (let [key, value] of Object.entries(data)) {
+		console.log(key)
+		if(regexWithNumbers.test(key)){
+			console.log(key)
+		}
+	}
+
 	return (
 		<div id="docPreview">
 			<div className="header">
@@ -42,7 +49,6 @@ const DocPreview = (props) => {
 				{data.pInfoDescription} <br />
 				<h2 className="subHeading">Education:</h2>
 				{dataFormated.map((item, index) => {
-					console.log(item, " ", index);
 					return (
 						<div key={index}>
 							<div className="dateInfo">
