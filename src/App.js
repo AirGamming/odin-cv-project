@@ -25,6 +25,7 @@ function App() {
 
 	function handleChange(e) {
 		let key = e.target.name;
+		console.log(key);
 		e.preventDefault();
 		if (e.target.type === "file") {
 			setData((prevData) => {
@@ -63,6 +64,9 @@ function App() {
 			let newElement = document.createElement(el.localName);
 			newElement.id = el.id + "-" + (lastIDNum + 1);
 			newElement.key = el.key;
+			newElement.name = el.id + "-" + (lastIDNum + 1);
+			console.dir(newElement);
+			newElement.onchange = handleChange;
 			if (newElement.type !== "textarea") {
 				newElement.type = el.type;
 			}
