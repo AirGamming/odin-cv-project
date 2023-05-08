@@ -4,14 +4,14 @@ import "../css/doc.css";
 const DocPreview = (props) => {
 	let data = props.Data;
 
-	let schoolData = [
-		"school",
-		"degree",
-		"eduStarted",
-		"eduEnded",
-		"eduDescription",
-	];
-	let regexWithNumbers = new RegExp(/(.*\d$)/s);
+	// let schoolData = [
+	// 	"school",
+	// 	"degree",
+	// 	"eduStarted",
+	// 	"eduEnded",
+	// 	"eduDescription",
+	// ];
+	// let regexWithNumbers = new RegExp(/(.*\d$)/s);
 
 	let dataFormated = [
 		{
@@ -25,12 +25,18 @@ const DocPreview = (props) => {
 	];
 
 	for (let [key, value] of Object.entries(data)) {
-		if(regexWithNumbers.test(key)){
-			console.log(key)
-			
+		let index = key.split("-")[1];
+		if (index === undefined) {
+			index = 0;
 		}
+		let array = {};
+		dataFormated.forEach((el) => {
+			if (el.index === index) {
+				array = el;
+			}
+		});
+		console.log(array);
 	}
-
 	return (
 		<div id="docPreview">
 			<div className="header">
