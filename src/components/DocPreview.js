@@ -4,13 +4,13 @@ import "../css/doc.css";
 const DocPreview = (props) => {
 	let data = props.Data;
 
-	// let schoolData = [
-	// 	"school",
-	// 	"degree",
-	// 	"eduStarted",
-	// 	"eduEnded",
-	// 	"eduDescription",
-	// ];
+	let schoolData = [
+		"school",
+		"degree",
+		"eduStarted",
+		"eduEnded",
+		"eduDescription",
+	];
 	// let regexWithNumbers = new RegExp(/(.*\d$)/s);
 
 	let dataFormated = [
@@ -29,14 +29,15 @@ const DocPreview = (props) => {
 		if (index === undefined) {
 			index = 0;
 		}
-		let array = {};
-		dataFormated.forEach((el) => {
-			if (el.index === index) {
-				array = el;
-			}
-		});
-		console.log(array);
+		if (dataFormated[index] == undefined) {
+			let objectCopy = dataFormated[0];
+			objectCopy.index = index;
+			dataFormated = [...dataFormated, objectCopy];
+		}
+
+		console.log("elo");
 	}
+	console.log(dataFormated);
 	return (
 		<div id="docPreview">
 			<div className="header">
