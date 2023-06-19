@@ -29,7 +29,7 @@ const DocPreview = (props) => {
 		if (index === undefined) {
 			index = 0;
 		}
-		if (dataFormated[index] == undefined) {
+		if (dataFormated[index] === undefined) {
 			let objectCopy = dataFormated[0];
 			objectCopy.index = index;
 			dataFormated = [...dataFormated, objectCopy];
