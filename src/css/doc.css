@@ -8,6 +8,8 @@
 	grid-template-columns: 65% 35%;
 	grid-template-rows: 10% 90%;
 	overflow-wrap: anywhere;
+	margin: 10px;
+	justify-self: center;
 }
 .header {
 	/* position: absolute; */

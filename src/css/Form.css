@@ -12,6 +12,7 @@ form {
 }
 form > fieldset {
 	padding: 20px;
+	width: 100%;
 }
 form > fieldset > input::-webkit-outer-spin-button,
 form > fieldset > input::-webkit-inner-spin-button {
@@ -25,7 +26,8 @@ form > fieldset > input[type="number"] {
 }
 form > fieldset > input,
 form > fieldset > textarea,
-form > fieldset > button {
+form > fieldset > button,
+form > button {
 	margin: 0.5rem 0;
 	padding: 0.5rem;
 	border: 2px solid var(--accent-color);
@@ -34,17 +36,15 @@ form > fieldset > button {
 	transition: all 0.2s ease-in-out;
 	font-size: 1rem;
 }
-form > button {
-	width: 100%;
-	margin: 0 calc((100vw - 100%) / 2);
-}
+
 form > button:hover {
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 }
 textarea {
 	resize: vertical;
-}.dateInfo{
+}
+.dateInfo {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

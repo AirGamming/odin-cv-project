@@ -6,8 +6,6 @@
 #root {
 	background-color: var(--secondary-color);
 	min-height: 100vh;
-	display: grid;
-	place-content: center;
 }
 #app {
 	padding-top: 100px;
@@ -16,12 +14,12 @@
 	grid-template-rows: 1fr;
 	grid-gap: 1rem;
 }
-@media (min-width: 900px) {
+@media (min-width: 1050px) {
 	#app {
 		grid-template-columns: 1fr 596px;
 	}
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 	#app {
 		grid-template-columns: 1fr;
 	}

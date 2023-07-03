@@ -34,8 +34,6 @@ const DocPreview = (props) => {
 			objectCopy.index = index;
 			dataFormated = [...dataFormated, objectCopy];
 		}
-
-		console.log("elo");
 	}
 	console.log(dataFormated);
 	return (
