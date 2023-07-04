@@ -52,6 +52,7 @@ const DocPreview = (props) => {
 				{data.pInfoDescription} <br />
 				<h2 className="subHeading">Education:</h2>
 				{dataFormated.map((item, index) => {
+					console.log(item);
 					return (
 						<div key={index}>
 							<div className="dateInfo">

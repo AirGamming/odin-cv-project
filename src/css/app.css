@@ -16,7 +16,7 @@
 }
 @media (min-width: 1050px) {
 	#app {
-		grid-template-columns: 1fr 596px;
+		grid-template-columns: 1fr 616px;
 	}
 }
 @media (max-width: 1050px) {
