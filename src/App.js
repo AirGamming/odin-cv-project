@@ -1,13 +1,14 @@
-import React from "react";
-import HeaderExp from "./components/header/header.js";
-import Main from "./components/main/main.js";
-import "./css/main.css";
+import React, { useState } from 'react'
+import Header from './components/header/header.js'
+import { SwitchMain } from 'components/main/switch.js'
+import './css/app.css'
 
 export default function App() {
-  return (
-    <div>
-      <HeaderExp />
-      <Main />
-    </div>
-  );
+	const [state, setState] = useState('main')
+	return (
+		<div>
+			<Header state={state} setState={setState} />
+			<SwitchMain />
+		</div>
+	)
 }
