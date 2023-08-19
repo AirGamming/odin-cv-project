@@ -36,7 +36,7 @@
 header > ul > li{
   padding: 10px;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
-}header > ul > li#active{
+}header > ul > li.active{
     font-weight: bolder;
 }
 header > ul > li:hover{
