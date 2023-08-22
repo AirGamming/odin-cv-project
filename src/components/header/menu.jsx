@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default function Menu({ state, setState }) {
+export default function Menu({ setState }) {
 	function OnClick(e) {
-		console.log(typeof e.target.id, ': ', e.target.id)
-		console.log(state)
 		setState(e.target.id)
+		let activeItems = document.querySelectorAll('.active')
+		activeItems.forEach((i) => {
+			i.classList.remove('active')
+		})
+		e.target.classList.add('active')
 	}
 	return (
 		<ul>

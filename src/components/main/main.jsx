@@ -3,7 +3,7 @@ import '../../css/main.css'
 
 export default function Main() {
 	return (
-		<main>
+		<main id='Main' className='active'>
 			<form action="">
 				<input type="text" name="" id="" />
 				<input type="text" />

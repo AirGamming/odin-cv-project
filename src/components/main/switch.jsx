@@ -1,20 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Main from './main.jsx'
 import About from './about.jsx'
 
 export function SwitchMain(state) {
-	console.log(state.state === 'Main')
-	const func = (state) => {
-		if (state === 'Main') {
-			console.log('switch')
-			return <Main />
-		} else if (state === 'About') {
-			console.log('switch')
-			return <About />
-		}
+	console.log(state.state.state)
+	let visabilitySwitch = (currentState) => {
+		let selected = document.querySelectorAll(`#${currentState}`)
+		let active = document.querySelectorAll(`.active`)
+		selected.forEach((e) => e.classList.add('active'))
+		active.forEach((e) => e.classList.remove('active'))
 	}
 	useEffect(() => {
-		func(state.state)
+		visabilitySwitch(state.state)
 	})
-	func()
+	return (
+		<>
+			<Main />
+			<About />
+		</>
+	)
 }

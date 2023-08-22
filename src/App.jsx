@@ -4,7 +4,7 @@ import { SwitchMain } from 'components/main/switch.jsx'
 import './css/app.css'
 
 export default function App() {
-	const [state, setState] = useState({ state: 'Main' })
+	const [state, setState] = useState('Main')
 	return (
 		<div id="app">
 			<Header state={state} setState={setState} />
