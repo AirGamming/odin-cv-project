@@ -2,7 +2,10 @@ import React from 'react'
 
 export default function Menu({ setState }) {
 	function OnClick(e) {
+		// setState id as state
 		setState(e.target.id)
+
+		//
 		let activeItems = document.querySelectorAll('.active')
 		activeItems.forEach((i) => {
 			i.classList.remove('active')
