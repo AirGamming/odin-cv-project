@@ -1,0 +1,21 @@
+.Fragment {
+	display: flex;
+	flex-direction: column;
+}
+.Fragment > * {
+	margin: 1em;
+	padding: 10px;
+	background-color: var(--color-secondary);
+	color: var(--color-accent);
+	font-size: 1em;
+	border: var(--color-accent) 2px solid;
+	border-radius: 10px;
+}
+.Fragment > *::placeholder {
+	color: var(--color-accent);
+}
+.Fragment > button {
+	background-color: var(--color-accent);
+	color: var(--color-secondary);
+	font-weight: 700;
+}
